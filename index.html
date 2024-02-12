@@ -1,0 +1,220 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<head>
+<title>มีจดหมายมาส่ง?</title>
+<!-- <meta name="description" content="Tapi Kita Akan Putus dalam Waktu">
+<meta name="keywords" content="Kamu Mau Gak Jadi Pacar Aku Tapi Kita Akan Putus dalam Waktu"> -->
+<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+<link href="https://htmlku.com/bukabentar/style.css" rel="stylesheet" type="text/css" /><script>  function otomatis() {befanimkata();setTimeout(animkata,400);} 
+  function befanimkata(){kalimat.style="transform:scale(.3);";kalimatb.style="transform:scale(.3);";kalimatc.style="transform:scale(.3);";} 
+  function animkata() {kalimat.style="transform:scale(1);";kalimatb.style="transform:scale(1);";kalimatc.style="transform:scale(1);";}
+  
+  function otomatis2() {befanimkata2();setTimeout(animkata2,400);} 
+  function befanimkata2(){kalimat.style.opacity="0";kalimatb.style.opacity="0";kalimatc.style.opacity="0";} 
+  function animkata2() {kalimat.innerHTML = kalimat2.innerHTML;kalimatb.innerHTML = kalimatb2.innerHTML;kalimatc.innerHTML="";kalimat.style.opacity="1";kalimatb.style.opacity="1";setTimeout(function(){kalimat.style.opacity="0";},2100);setTimeout(otomatis2b,2300);}
+  function otomatis2b(){kalimat.innerHTML = kalimat2b.innerHTML;kalimat.style.opacity="1";kalimatb.innerHTML = "";kalimatc.innerHTML = kalimatc2.innerHTML;kalimatc.style.opacity="1";fthilang();ftganti=2;setTimeout(ftmuncul,300);setTimeout(mulaict,400);}
+  
+  function otomatis3() {
+    kalimat.style.opacity="0";
+    kalimatb.style.opacity="0";
+    kalimatc.style.opacity="0";
+
+    setTimeout(function(){
+        kalimat.innerHTML = "";
+        kalimatb.innerHTML = "";
+        kalimatc.innerHTML = "";
+
+        var kal3 = kalimat3.innerHTML;
+        var kal4 = kalimatb3.innerHTML;
+        var kal5 = kalimatc3.innerHTML;
+            
+        kalimat.style.opacity="1";
+        kalimatb.style.opacity="1";
+        kalimatc.style.opacity="1";
+
+        new TypeIt("#kalimat", {
+          strings: ["" + kal3], startDelay: 1, speed: 30, cursor: true,
+          afterComplete: function(){
+            kalimat.innerHTML = kal3;
+            setTimeout(function(){
+              new TypeIt("#kalimatb", {
+                strings: ["" + kal4], startDelay: 50, speed: 30, cursor: true,
+                afterComplete: function(){
+                  kalimatb.innerHTML = kal4;
+                  setTimeout(function(){
+                    fthilang();ftganti=4;setTimeout(ftmuncul,300);
+                    new TypeIt("#kalimatc", {
+                      strings: ["" + kal5], startDelay: 50, speed: 30, cursor: true,
+                      afterComplete: function(){
+                        kalimatc.innerHTML = kal5;
+                        setTimeout(function(){
+                            setInterval(berjatuhan,200);  
+                            kalimatc.style.animation = "jj 1.1s infinite alternate";
+                            setTimeout(sbakhir,300);
+                        },200);
+                    },}).go();
+                  },200);
+              },}).go();
+            },200);
+        },}).go();
+    },200);
+  } 
+  
+  function sbakhir(){Bn.style.display="none";tmbl.innerHTML="💌 ตกลง";Tombol.style="margin-top:10px;opacity:1;transform: scale(1)";ftom=5;fungsi=0;}
+  
+  async function diterima(){
+    pesanTolak.style.display="none";
+    fthilang();ftganti=1;
+    setTimeout(ftmuncul,300);
+    Bn2.style.display="none";
+    wallpaper.style="transform: scale(1)";
+    bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);transition:all .7s ease;border-radius:var(--bingkai);margin-top:0;";
+    Tombol.style="opacity:0;transition:all .5s ease;transform: scale(.1);";
+    otomatis2();
+   }
+
+  flag=1;flagg=1;
+  function ditolak(){
+  	if(fungsi==1){
+        pesanTolak.style.opacity="1";
+        pesanTolak.style.transform="scale(1)";
+        pesanTolak.style.position="relative";
+        pesanTolak.style.marginTop="10px";
+  	    if(flagg==1){
+            Bn.style="margin:12px 0 12px 12px;cursor:default;opacity:0;transition:all 0s ease;";
+            flagg=2;
+            Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:160px 0 12px 140px;"
+        }
+  	}
+   }
+  function ditolak2(){
+  	if(fungsi==1){
+  	if(flagg==2){Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:190px 0 12px 12px;";flagg=3}
+  	    else if(flagg==3){Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:160px 160px 12px 12px;";flagg=4}
+  		else if(flagg==4){Bn2.style="transition:all .3s ease;margin:12px 0 12px 12px;";Bn.style="margin:12px 0 12px 12px";flagg=1}
+  	    }
+   }
+
+  function mulaict(){
+    var timeleft = 5;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("ctimer").textContent = timeleft;
+    if(timeleft <= 0)
+      clearInterval(downloadTimer);
+      if(timeleft==0){
+      fthilang();ftganti=3;
+      setTimeout(ftmuncul,300);otomatis3();
+      }
+    },1000);
+  }
+
+  /* Hati Berjatuhan */
+  function berjatuhan() {
+    const heart = document.createElement("div");
+    heart.innerHTML = "<svg class='line spin' style='opacity:.5;' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(2.550170, 3.550158)'><path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path><path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path></g></svg>";
+    heart.className = "heart-icon";
+    heart.style.left = (Math.random() * 95) + "vw";
+    heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+    document.body.appendChild(heart);
+  }
+  
+  setInterval(function() {
+    var heartArr = document.querySelectorAll(".heart-icon");
+    if (heartArr.length > 100) {
+      heartArr[0].remove();
+    }
+  }, 100);</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"><script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+</head>
+<style>
+:root {
+--warna-bg: rgba(0, 0, 0, .5); 
+--warna-teks: #fff;
+--warna-bingkai: #fff;
+--bingkai: 8px;
+--bingkai-kiri: 2px solid var(--warna-bingkai);
+--bingkai-kanan: 2px solid var(--warna-bingkai);
+--gaya-font: 'Josefin Sans', sans-serif;
+}
+</style>
+<body>
+	
+   <!-- Ganti Audio di sini --><audio id="linkmp3">https://feeldreams.github.io/hayoloh/inow.mp3</audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://media.discordapp.net/attachments/1201852679853441055/1206579247951380480/IMG_20231226_165900_637.jpg?ex=65dc857d&is=65ca107d&hm=4105f4340a6443fdd41b44e42d308438890a5887fd206cb9f366de0932cd9dd0&=&format=webp&width=447&height=597" id="wallpaper"/>
+   </div>
+
+   <div id='Content'>
+   	
+     <div id="suratin" onClick="memulai();audio.play();">
+       <!-- Tombol Surat --><img src="https://rayyscoding.github.io/envelope.png"/>
+     </div>
+     <p id="ket">เปิดจดหมาย!</p>
+
+     <div><blockquote id='bq'>
+       <div>
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/pandapanah.gif" id="fotoakhir"/>
+         <img src="https://feeldreams.github.io/peach1.gif" id="fotoakhir2"/>
+         <img src="https://feeldreams.github.io/weee.gif" id="fotoakhir3"/>
+         <img src="https://htmlku.com/0/panda/ketawa2.gif" id="fotoakhir4"/>
+         <img src="https://htmlku.com/0/panda/muah.gif" id="fotoakhir5"/>
+       </div>
+
+       <!-- Konten Pertanyaan -->
+       <p id="kalimat">เธอจะ<br>เป็นแฟนเราไหม? 🤭❤️<br><span id="pesanTolak" style="opacity:0;font-size: 15px;font-weight: 400;transform:scale(0);transition: all .6s ease;position: absolute;display: flex;justify-content: center;">จะเป็นไหม! 😝</span></p>
+       <p id="kalimatb"></p>
+       <p id="kalimatc"></p>
+
+       <!-- Konten Jawaban -->
+       <p id="kalimat2">เย้้้! 😆</p>
+       <p id="kalimatb2">จากนี้ไปเธอ, <br>คือแฟนของเรา 🤭❤️</p>
+       <p id="kalimat2b">เอ๊ะะะะ!.. 🏃</p>
+       <p id="kalimatc2">แต่เราจะ <b>เลิกกัน</b><br>ในระหว่าง: <b id="ctimer" style="font-size:24px">5</b> 🫠</p>
+
+       <!-- Konten Jawaban 2 -->
+       <p id="kalimat3">หยอกเล่น! 😜</p>
+       <p id="kalimatb3">แต่ตอนนี้เธอเป็น<br>แฟนของเราจริงๆแล้วนะ, อ๊ากกกก 🤣❤️</p>
+       <p id="kalimatc3"><b>i love uuuu 😍💗🤍</b></p>
+     </blockquote></div>
+
+     <!-- Tombol Multifungsi -->
+     <div id="Tombol">
+       <a id="By" onClick="multifungsi()">
+         <b id="tmbl">ตกลง</b>
+       </a>
+       
+       <a id="Bn" onClick="ditolak()">ไม่เป็น</a><a id="Bn2" onClick="ditolak2()"></a>
+     </div>
+     
+   </div>
+
+<!-- Jangan Edit Bagian Ini -->
+  <script>
+  ftom=0;jikapr=1;ftganti=0;flag=1;flagg=1;fungsi=0;Bn2.innerHTML=Bn.innerHTML;kalimat2b.style="display:none";function showDiv() {pesanwhatsapp = "Aku mau kok jadi pacarmu ><";Bn2.style.display="none";Content.style = "opacity:1;margin-top:10vh;";ket.style="margin-top:30px";}
+  function memulai(){suratin.style="transition:all .7s ease;transform:scale(10);opacity:0";ket.style="display:none";setTimeout(mulaikonten,500)}
+  function mulaikonten() {otomatis();suratin.style="display:none";Content.style = "opacity:1;margin-top:10vh";bodyblur.style="opacity:.6;";wallpaper.style="transform: scale(1.5);opacity:1;";fotoakhir.style="display:inline-flex;";setTimeout(ftmuncul,200);bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);border-radius:var(--bingkai);margin-top:0";fungsi=1;setTimeout(tombol,500);}
+  function tunjukkan(){}
+function hilangkan() {}
+  function ftmuncul(){
+    if(ftganti==0){fotoakhir.style="display:inline-flex;opacity:1;transform:scale(1)";}
+    if(ftganti==1){fotoakhir.src = fotoakhir2.src;fotoakhir.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==2){fotoakhir.src = fotoakhir3.src;fotoakhir.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==3){fotoakhir.src = fotoakhir4.src;fotoakhir.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==4){fotoakhir.src = fotoakhir5.src;fotoakhir.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+  }
+  function fthilang(){fotoakhir.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";}
+  function jjfoto(){fotoakhir.style.animation="rto .8s infinite alternate";}
+  
+  function tombol(){Tombol.style="opacity:1;transform: scale(1);";Bn.style="margin:12px 0 12px 12px";ftom=1;}
+  function multifungsi(){if(ftom==1){diterima();} if(ftom==5){menuju();}}
+  async function menuju(){await swals.fire('โอเค!', 'รักเธอนะจุ๊บๆๆๆ', 'success');} setTimeout(showDiv,100);
+
+  const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 100,}); audio = new Audio('' + linkmp3.innerHTML);const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+   const body = document.querySelector("body");
+</script><!--
+<script src="https://test.feeldream.repl.co/tambahan.js"></script>-->
+<!-- Sampai Sini -->
+</body>
+</html>
