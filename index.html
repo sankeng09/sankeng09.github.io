@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>sanken | pw</title>
+    <title>รหัสผ่าน | sankeng</title>
     <style>
         body {
             display: flex;
@@ -45,14 +45,31 @@
         #submit-button:hover {
             background-color: #45a049;
         }
+        #header {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body onmousemove="changeBackground(event)">
+    <div id="header">ยินดีต้อนรับสู่เว็บไซต์ของเรา!</div>
     <div id="password-box">
         <input id="password-input" type="password" placeholder="ใส่รหัสผ่านที่นี่">
         <button id="submit-button">ยืนยัน</button>
     </div>
+    <div id="footer">© 2024 ยินดีเสมอที่เราได้เป็นเพื่อนกัน</div>
     <script>
         function changeBackground(event) {
             document.body.style.backgroundColor = 'rgb(' + event.clientX % 255 + ',' + event.clientY % 255 + ',100)';
@@ -63,9 +80,9 @@
             if (password === 'gomett') {
                 Swal.fire({
                     title: 'ถูกต้อง!',
-                    text: 'คุณได้ใส่รหัสผ่านที่ถูกต้อง',
+                    text: 'รักพวกมึงนะเว้ย เพื่อน',
                     icon: 'success',
-                    timer: 2000, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
+                    timer: 1500, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
                     timerProgressBar: true,
                     showConfirmButton: false
                 }).then((result) => {
@@ -77,8 +94,8 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'ผิดพลาด...',
-                    text: 'รหัสผ่านที่คุณใส่ไม่ถูกต้อง',
-                    timer: 2000, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
+                    text: 'คำใบ้รหัส กร๊ป โอเว่น มิก เอิร์ท ต้นกล้า ทอฟฟี่',
+                    timer: 1500, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
                     timerProgressBar: true,
                     showConfirmButton: false
                 })
