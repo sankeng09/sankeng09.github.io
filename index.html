@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>รหัสผ่าน</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            transition: background-color 2s;
+        }
+        #password-box {
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+        #password-input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        #submit-button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: #4CAF50;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onmousemove="changeBackground(event)">
+    <div id="password-box">
+        <input id="password-input" type="password" placeholder="ใส่รหัสผ่านที่นี่">
+        <button id="submit-button">ยืนยัน</button>
+    </div>
+    <script>
+        function changeBackground(event) {
+            document.body.style.backgroundColor = 'rgb(' + event.clientX % 255 + ',' + event.clientY % 255 + ',100)';
+            document.getElementById('password-box').style.transform = 'rotate(' + event.clientX % 360 + 'deg)';
+        }
+        document.getElementById('submit-button').addEventListener('click', function() {
+            var password = document.getElementById('password-input').value;
+            if (password === 'รหัสผ่านที่กำหนด') {
+                Swal.fire({
+                    title: 'ถูกต้อง!',
+                    text: 'คุณได้ใส่รหัสผ่านที่ถูกต้อง',
+                    icon: 'success',
+                    timer: 2000, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = 'หน้าถัดไป.html'; // แก้ไขเป็น URL ของหน้าถัดไป
+                    }
+                })
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ผิดพลาด...',
+                    text: 'รหัสผ่านที่คุณใส่ไม่ถูกต้อง',
+                    timer: 2000, // ตั้งค่าเวลาหมดเวลาเป็น 2000 มิลลิวินาที (2 วินาที)
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                })
+            }
+        });
+    </script>
+</body>
+</html>
