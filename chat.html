@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>หน้าแชทระบายอารมณ์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            font-family: 'Mali', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .chatbox {
+            margin: 15px;
+            height: 300px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-y: scroll;
+            border: 2px solid #000;
+            box-shadow: 10px 10px 5px grey;
+        }
+        .message-input {
+            margin: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 50px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+        button {
+            background-color: #008CBA; /* Blue */
+            border: 2px solid #000;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            box-shadow: 10px 10px 5px grey;
+        }
+        button:hover {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+      <h1>หน้าแชทระบายอารมณ์</h1>
+  </div>
+  <div class="chatbox" id="chatbox">
+      <!-- ข้อความจะปรากฏที่นี่ -->
+  </div>
+  <div class="message-input">
+      <textarea id="message" name="message" placeholder="พิมพ์ข้อความที่นี่..."></textarea>
+      <button onclick="sendMessage()">ส่งข้อความ</button>
+  </div>
+  <script>
+      function sendMessage() {
+          var message = document.getElementById('message').value;
+          var chatbox = document.getElementById('chatbox');
+
+          // แสดงข้อความที่ผู้ใช้ส่งไปในกล่องแชท
+          chatbox.innerHTML += '<p><strong>You:</strong> ' + message + '</p>';
+
+          // ส่งข้อความไปยัง API บอท
+          fetch('https://api.chatbot.com/v1/messages', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer SPqaoercxRpKVEC4cevDstN3NNlN2bi7'
+              },
+              body: JSON.stringify({
+                  message: {
+                      content: message,
+                      type: 'text'
+                  },
+                  recipient: {
+                      id: 'user'
+                  }
+              })
+          })
+          .then(response => response.json())
+          .then(data => {
+              // แสดงข้อความที่ได้รับจากบอทในกล่องแชท
+              chatbox.innerHTML += '<p><strong>Bot:</strong> ' + data.message.content + '</p>';
+          })
+          .catch(error => console.error('Error:', error));
+
+          // ล้างข้อความที่ผู้ใช้ป้อน
+          document.getElementById('message').value = '';
+      }
+  </script>
+</body>
+</html>
