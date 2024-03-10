@@ -101,29 +101,30 @@
   </div>
 
 <script>
-    // เลือกปุ่มเข้าสู่ระบบ
-    const loginButton = document.getElementById('btn_login');
+   // เลือกปุ่มเข้าสู่ระบบ
+const loginButton = document.getElementById('btn_login');
 
-    // เพิ่มการฟังก์ชั่นเมื่อคลิกที่ปุ่ม
-    loginButton.addEventListener('click', function() {
-        // ตรวจสอบว่าผู้ใช้กรอกข้อมูลหรือไม่
-        const inputName = document.getElementById('input_name').value;
-        if (inputName.trim() === '') {
-            // แสดง SweetAlert2 หากผู้ใช้ไม่ได้กรอกข้อมูล
-            Swal.fire({
-                icon: 'error',
-                title: 'ผิดพลาด',
-                text: 'กรุณากรอกชื่อของคุณ',
-            });
-        } else {
-            // แสดง SweetAlert2 และนำผู้ใช้ไปยังหน้าถัดไปหากผู้ใช้กรอกข้อมูลแล้ว
-            Swal.fire({
-                icon: 'success',
-                title: 'สำเร็จ',
-                text: 'เริ่มเลย!!',
-            })
-        }
-    });
+// เพิ่มการฟังก์ชั่นเมื่อคลิกที่ปุ่ม
+loginButton.addEventListener('click', function() {
+    // ตรวจสอบว่าผู้ใช้กรอกข้อมูลหรือไม่
+    const inputName = document.getElementById('input_name').value;
+    if (inputName.trim() === '') {
+        // แสดง SweetAlert2 หากผู้ใช้ไม่ได้กรอกข้อมูล
+        Swal.fire({
+            icon: 'error',
+            title: 'ผิดพลาด',
+            text: 'กรุณากรอกชื่อของคุณ',
+        });
+    } else {
+        // แสดง SweetAlert2 และนำผู้ใช้ไปยังหน้าถัดไปหากผู้ใช้กรอกข้อมูลแล้ว
+        Swal.fire({
+            icon: 'success',
+            title: 'สำเร็จ',
+            text: 'เริ่มเลย!!',
+        })
+    }
+});
+
 </script>
 
 <div class="footer">
